@@ -5,7 +5,7 @@
 %}
 
 %%
-[0-1]*000[0-1]* {printf("String Accepted");}
+[0-9]*000[0-9]* {printf("String Accepted");}
 [0-9]* {printf("String Rejected");}
 
 %%
