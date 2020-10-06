@@ -1,25 +1,20 @@
-/*lex program to count the number of vowels and consanants*/
+//Lex program to count the number of vowels and consanants
 %{
-int i=0;
-int j=0;
+#include<stdio.h>
+int vow_no=0,con_no=0;
 %}
 
-/*Rules Section*/
 %% 
-([a,e,i,o,u])  {i=i+1;}
-([a-zA-Z])  {j=j+1;}
-"\n" {printf("Vowels : %d ",i);  printf("Consonants : %d ",j);}
+([aeiouAEIOU])  {vow_no++;}
+([a-zA-Z])  {con_no++;}
 %%
 
-
-int yywrap(void){}
-
+int yywrap(){}
 int main()
 {
-  //function will starts the analysis
+  printf("Enter a string: ");
   yylex();
-  
+  printf("Number of vowels: %d",vow_no);
+  printf("Number of consonants: %d",con_no);
   return 0;
 }
-
-
