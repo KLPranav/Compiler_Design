@@ -1,3 +1,4 @@
+/*Recognizing strings ending with 00 */
 %{
 #include<stdio.h>
 int flag=0;
