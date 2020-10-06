@@ -1,18 +1,21 @@
 /*Recognizing a string with three consecutive 0's*/
-
 %{
 #include<stdio.h>
+int flag=0;
 %}
 
 %%
-[0-1]*000[0-1]* {printf("String Accepted");}
-[0-9]* {printf("String Rejected");}
-
+[0-9]*000[0-9]* flag=1;
 %%
 
-int yywrap(void){}
+int yywrap(){}
 int main()
 {
-yylex();
-  return 0;
+  printf("Enter a string: ");
+  yylex();
+  if(flag==1)
+    printf("Given string contains three consecutive 0's");
+  else
+    printf("Given string does not contain three consecutive 0's");
+    return 0;
 }
