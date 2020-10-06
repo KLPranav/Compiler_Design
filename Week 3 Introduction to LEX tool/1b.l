@@ -6,7 +6,7 @@ int vow_no=0,con_no=0;
 
 %% 
 ([aeiouAEIOU])  {vow_no++;}
-([a-zA-Z])  {con_no++;}
+([a-z A-Z])  {con_no++;}
 %%
 
 int yywrap(){}
