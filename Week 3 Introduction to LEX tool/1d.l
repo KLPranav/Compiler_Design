@@ -1,16 +1,19 @@
-%option noyywrap
 %{
 #include<stdio.h>
+int flag=0;
 %}
 
 %%
-
-[0-1]*00 {printf("string accepted");}
-
-[0-9]* {printf("string rejected");}
+[0-9]*00 flag=1;
 %%
+int yywrap(){};
 int main()
 {
-yylex();
-return 0;
+  printf("Enter a string: ");
+  yylex();
+  if(flag==1)
+    printf("Given string ends with 00");
+   else
+    printf("Given string does not end with 00");
+  return 0;
 }
