@@ -18,7 +18,7 @@ int main(){
 int i,z;
 char c,ch;
 //clrscr();
-printf("Enter the no of prooductions:\n");
+printf("Enter the no of productions:\n");
 scanf("%d",&n);
 printf("Enter the productions:\n");
 for(i=0;i<n;i++)
@@ -89,7 +89,7 @@ output:
 
 
 
-Enter the no of prooductions:                                                                                                                   
+Enter the no of productions:                                                                                                                   
 4                                                                                                                                               
 Enter the productions:                                                                                                                          
 s=aAB                                                                                                                                           
