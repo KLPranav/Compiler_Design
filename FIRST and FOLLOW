@@ -1,6 +1,6 @@
 
 
-write a C program for the computation of FIRST and FOLLOW for given CFG
+Write a C program to compute the FIRST and FOLLOW functions for all non-terminals in a given grammar G. Assume that G is not left recursive. 
 
 
 #include<stdio.h>
